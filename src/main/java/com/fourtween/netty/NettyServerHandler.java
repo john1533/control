@@ -20,7 +20,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter  {
         System.err.println("服务器接收到客户端消息：" + recieved);
         
         try {
-            ctx.writeAndFlush(getSendByteBuf("你好，客户端"));
+            ctx.writeAndFlush(getSendByteBuf("你好，您一定会成功的！"));
             System.err.println("服务器回复消息：你好，客户端");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();

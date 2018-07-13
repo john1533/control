@@ -41,6 +41,10 @@ public class ChannelHolder {
 		for(String key:instance.ctxCache.keySet()){
 			System.out.println(key+":"+instance.ctxCache.get(key));
 		}
-	} 
+	}
+	
+	public static ChannelHandlerContext getCtx(String client){
+		return getInstance().ctxCache.get(client);
+	}
 	
 }

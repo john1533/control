@@ -34,7 +34,7 @@ public class ControlServer{
                 protected void initChannel(SocketChannel socketChannel)
                         throws Exception {
                     ChannelPipeline p = socketChannel.pipeline();
-                    p.addLast(new NettyServerHandler2());// 添加NettyServerHandler，用来处理Server端接收和处理消息的逻辑
+                    p.addLast(new NettyServerHandler());// 添加NettyServerHandler，用来处理Server端接收和处理消息的逻辑
                 }
             });
             ChannelFuture channelFuture = bootstrap.bind(port).sync();
